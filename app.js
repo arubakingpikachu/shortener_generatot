@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const exphbs = require('express-handlebars')
 const methodOverride = require('method-override')
+require('./config/mongoose')
 
 const port = 3000
 
