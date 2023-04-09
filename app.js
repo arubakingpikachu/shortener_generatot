@@ -2,9 +2,11 @@ const express = require('express')
 const app = express()
 const exphbs = require('express-handlebars')
 const methodOverride = require('method-override')
+const shortenerGenerator=require('./shortener_ generator')
 require('./config/mongoose')
 
 const port = 3000
+
 
 
 app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }))
