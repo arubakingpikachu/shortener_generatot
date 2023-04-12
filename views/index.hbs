@@ -18,7 +18,11 @@
                   <button class="btn btn-success" type="submit">Generate Shortener</button>
                   </div>
               </form>
-              
+              {{#if short}}
+               <div>
+                <p>{{short}}</p>
+              </div>
+              {{/if}}
         </div>
       </div>
     </div>

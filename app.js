@@ -33,13 +33,14 @@ app.post('/',(req,res)=>{
   
   urlData.findOne({originalUrl:ori_url})
   .then(url=>{
-    if(!url){
-      urlData.create({shortenerUrl:`${short_url}`,originalUrl:`${ori_url}`})//假如找不到對應的URL，就創造一組新的URL跟短網址
+    if(url){
+     res.render('index',{origin:url.originalUrl,short:url.shortenerUrl,})
+    }else{//假如找不到對應的URL，就創造一組新的URL跟短網址
+      urlData.create({shortenerUrl:`${short_url}`,originalUrl:`${ori_url}`})
+      .then(url=>{
+        res.render('index',{origin:url.originalUrl,short:url.shortenerUrl,})
+      })
     }
-  })
-  .then(url=>{
-    console.log(short_url)
-    res.render('index',{origin:url.originalUrl,short:url.shortenerUrl,})
   })
   .catch(error => console.error(error))
 
