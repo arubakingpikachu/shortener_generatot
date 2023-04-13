@@ -45,6 +45,22 @@ app.post('/',(req,res)=>{
   .catch(error => console.error(error))
 
 })
+//用redirect讓短網址發揮作用
+app.get('/:path',(req,res)=>{
+  const {path}=req.params
+
+  urlData.findOne({shortenerUrl:path})
+  .then(url=>{
+    if(!url){
+      return res.render('error',{error_message:'Can not find the URL',error_url:req.headers.host + "/" + `${path}`})
+    }else{
+      res.redirect(url.originalUrl)
+    }
+  })
+  . catch((error) => console.log(error))
+})
+
+
 
 app.listen(port, () => {
   console.log(`Express is running on http://localhost:${port}`)
