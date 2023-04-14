@@ -3,7 +3,7 @@
     <div class="col-12 col-lg-10 col-xl-8 mx-auto">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Shortener Generator <i class="fas fa-key"></i></h5>
+          <h5 class="card-title">輸入網址</h5>
            <form action="/" method="post">
             <div class="input-group mb-3" >
               <label for="ori_url" class="form-label"></label>
@@ -13,28 +13,32 @@
                 id="ori_url"
                 name="ori_url" 
                 value="{{origin}}"
-                placeholder="輸入網址"
+                placeholder="https //example.com"
                 required>
-                <button class="btn btn-success" type="submit">縮網址</button>  
+                <button class="btn btn-success" type="submit">縮短</button>
             </div>
-
+          </form>
             {{#if short}}
-               <div>
-                <h5>縮網址成功</h5>
-                  <input id="shorter_url" value="http://localhost:3000/{{short}}">
-                    <button class="btn btn-success" onclick="copy()">
-                      複製
-                    </button>   
+            <h5 class="card-title">複製短網址</h5>
+              <form>
+               <div class="input-group mb-3">
+                  <input
+                  type="text"
+                  class="form-control"
+                  id="shorter_url" 
+                  value="http://localhost:3000/{{short}} ">
+                  <button class="btn btn-success" width="111px" onclick="copy()">複製</button> 
                 </div>
                 <script>
                   function copy(){
                     const copyText=document.getElementById("shorter_url").value
                     navigator.clipboard.writeText(copyText)
-                    .then(function success(s){alert(`copy http://localhost:3000/${copyText}`)})
+                    .then(function success(s){alert(`copy ${copyText}`)})
                     .catch(function error(e) {console.log(error)})}
                 </script>
+              </form>
              {{/if}}
-          </form>
+          
         </div>
       </div>
     </div>
