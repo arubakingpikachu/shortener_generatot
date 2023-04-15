@@ -1,4 +1,4 @@
-
+//產生5位亂數path
 const element = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
 
 module.exports = (shortener_length) => {
@@ -8,6 +8,5 @@ module.exports = (shortener_length) => {
     const chooseElement = element[index]
     result += chooseElement
   }
-  console.log(result)
   return result
 }
