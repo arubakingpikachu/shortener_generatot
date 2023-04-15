@@ -1,7 +1,7 @@
 # 短網址產生器
 
-!(短網址的效果)[https://github.com/arubakingpikachu/shortener_generatot/blob/main/shortener.png]
-!(錯誤頁面)[https://github.com/arubakingpikachu/shortener_generatot/blob/main/error.png]
+![短網址的效果](https://github.com/arubakingpikachu/shortener_generatot/blob/main/shortener.png)
+![錯誤頁面](https://github.com/arubakingpikachu/shortener_generatot/blob/main/error.png)
 
 ## 功能
 1. 使用者輸入原網址，點擊"縮短"按鈕後，會產生一組短網址。
