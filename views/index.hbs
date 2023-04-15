@@ -33,7 +33,7 @@
                   function copy(){
                     const copyText=document.getElementById("shorter_url").value
                     navigator.clipboard.writeText(copyText)
-                    .then(function success(s){alert(`copy ${copyText}`)})
+                    .then(function success(s){alert(`You have copied ${copyText}`)})
                     .catch(function error(e) {console.log(error)})}
                 </script>
               </form>
