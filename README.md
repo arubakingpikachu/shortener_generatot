@@ -11,9 +11,9 @@
 1. 確認已安裝npm、node.js、nodemon 。
 2. 在終端機clone本專案。
 ```
-git clone https://github.com/arubakingpikachu/restaurantList.git
+git clone https://github.com/arubakingpikachu/shortener_generatot.git
 ```
-3. 透過終端機打開restaurantList資料夾，輸入：
+3. 透過終端機打開shortener_generator資料夾，輸入：
 ```
 npm install
 ```
